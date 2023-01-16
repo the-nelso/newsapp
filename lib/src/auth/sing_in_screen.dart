@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/src/auth/sing_up_screen.dart';
 import 'package:newsapp/src/components/custom_text_field.dart';
 import 'package:newsapp/src/config/custom_colors.dart';
 
@@ -132,7 +133,13 @@ class SingInScreen extends StatelessWidget {
                         style: OutlinedButton.styleFrom(
                             side: const BorderSide(width: 2, color: Colors.blue),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18))),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (c) {
+                              return SignUpScreen();
+                            }),
+                          );
+                        },
                         child: const Text(
                           "Criar Conta",
                           style: TextStyle(fontSize: 18),
